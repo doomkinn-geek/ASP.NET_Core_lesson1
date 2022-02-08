@@ -6,9 +6,21 @@ namespace ASP.NET_Core_lesson1
 {
     public class ThePost
     {
-        uint userId { get; set; }
-        uint id { get; set; }
-        string title { get; set; }
-        string body { get; set; }
+        public uint userId { get; set; }
+        public uint id { get; set; }
+        public string title { get; set; }
+        public string body { get; set; }
+        public override string ToString()
+        {
+            string res = "";
+            res += userId.ToString();
+            res += "\n";
+            res += id.ToString();
+            res += "\n";
+            res += title;
+            res += "\n";
+            res += body;
+            return res;
+        }
     }
 }
