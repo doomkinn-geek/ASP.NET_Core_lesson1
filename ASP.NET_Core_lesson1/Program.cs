@@ -17,11 +17,10 @@ namespace ASP.NET_Core_lesson1
             ThePost post = null;
             string request = "https://jsonplaceholder.typicode.com/posts/";
 
-
-            for (int i = 0; i < 11; i++)
+            using (var file = new StreamWriter(File.Create("output.txt")))
             {
-                using (var file = new TextWriter(FileAccess.ReadWrite))
-                {
+                for (int i = 0; i < 11; i++)
+                {                
                     post = await Request(request + i.ToString(), httpClient);
                     file.WriteLine(post.ToString());
                 }

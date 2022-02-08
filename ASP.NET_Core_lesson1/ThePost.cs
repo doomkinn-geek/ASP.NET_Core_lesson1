@@ -20,6 +20,7 @@ namespace ASP.NET_Core_lesson1
             res += title;
             res += "\n";
             res += body;
+            res += "\n";
             return res;
         }
     }
